@@ -126,10 +126,9 @@ int main() {
 
     cout << "2.) Pointer to Structure -> x: " << ptr->x << ", y: " << ptr->y << endl;
 
-    // Static variable and difference between (const char *p,char const *p,const char* const p).
-    const char *p1 = "Hello";        // Pointer to constant data
-    char const *p2 = "World";        // Pointer to constant data
-    const char* const p3 = "C++";    // Constant pointer to constant data
+    const char *p1 = "Hello";     
+    char const *p2 = "World";     
+    const char* const p3 = "C++";    
 
     staticVarTesto();
     staticVarTesto();
