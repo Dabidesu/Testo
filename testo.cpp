@@ -1,28 +1,28 @@
 #include <iostream>
 
-// String library functions(syntax)
+// 4.) String library functions(syntax)
 #include <cstring>
 
 using namespace std;
 
-// Pointer to a function.
+// 1.) Pointer to a function.
 void ptr2Function() {
     cout << "1.) Pointer to Function" << endl;
 }
 
-// Pointer to structure.
+// 2.) Pointer to structure.
 struct ptr2Structure {
     int x, y;
 };
 
-// Static variable and difference between (const char *p,char const *p,const char* const p).
+// 3.) Static variable and difference between (const char *p,char const *p,const char* const p).
 void staticVarTesto() {
     static int count = 0;  
     count++;
     cout << "3-" << count << ".) Static Variable -> Count: " << count << endl;
 }
 
-// Pass by value & reference.
+// 5.) Pass by value & reference.
 void passByValue(int a) {
     a = 10;
 }
@@ -31,7 +31,7 @@ void passByReference(int &a) {
     a = 10;
 }
 
-// Write a program to compare two strings without using the strcmp() function.
+// 6.) Write a program to compare two strings without using the strcmp() function.
 bool compareTwoStrings(const char* strA, const char* strB) {
     while (*strA && (*strA == *strB)) {
         strA++;
@@ -40,7 +40,7 @@ bool compareTwoStrings(const char* strA, const char* strB) {
     return *(unsigned char*)strA - *(unsigned char*)strB == 0;
 }
 
-// Write a program to concatenate two strings.
+// 7.) Write a program to concatenate two strings.
 void concatenateStrings(char* dest, const char* src) {
     while (*dest) {
         dest++;
@@ -51,7 +51,7 @@ void concatenateStrings(char* dest, const char* src) {
     *dest = '\0';
 }
 
-// Write programs for String Reversal & Palindrome check.
+// 8.) Write programs for String Reversal 
 void reverseString(char* str) {
     int len = strlen(str);
     for (int i = 0; i < len / 2; ++i) {
@@ -59,6 +59,7 @@ void reverseString(char* str) {
     }
 }
 
+// 9.) Palindrome check.
 bool isPalindrome(const char* str) {
     int len = strlen(str);
     for (int i = 0; i < len / 2; ++i) {
@@ -69,13 +70,13 @@ bool isPalindrome(const char* str) {
     return true;
 }
 
-// Write a program to find the Factorial of a number.
+// 10.) Write a program to find the Factorial of a number.
 int factorial(int n) {
     if (n == 0) return 1;
     return n * factorial(n - 1);
 }
 
-// Write a program to generate the Fibinocci Series.
+// 11.) Write a program to generate the Fibinocci Series.
 void fibonacci(int n) {
     int a = 0, b = 1, next;
     for (int i = 0; i < n; ++i) {
@@ -87,7 +88,7 @@ void fibonacci(int n) {
     cout << endl;
 }
 
-// Searching and sorting algorithms with complexities - Linear Search
+// 12-1.) Searching and sorting algorithms with complexities - Linear Search
 int linearSearch(int arr[], int size, int key) {
     for (int i = 0; i < size; i++) {
         if (arr[i] == key) {
@@ -97,7 +98,7 @@ int linearSearch(int arr[], int size, int key) {
     return -1;
 }
 
-// Searching and sorting algorithms with complexities - Binary Search
+// 12-2.) Searching and sorting algorithms with complexities - Binary Search
 int binarySearch(int arr[], int left, int right, int key) {
     while (left <= right) {
         int mid = left + (right - left) / 2;
@@ -195,6 +196,8 @@ int main() {
     int noOfTerms = 10;
     cout << "11.) First " << noOfTerms << " terms of Fibonacci series: ";
     fibonacci(noOfTerms);
+
+
 
     // Searching and sorting algorithms with complexities - Linear Search
     int arrLin[] = {2, 4, 0, 1, 9};
